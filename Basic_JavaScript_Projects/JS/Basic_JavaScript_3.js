@@ -1,19 +1,70 @@
 //========== VARIABLES ==========
 var My_color = "#472F70"
-var My_Alert = "Welcome to my website."
 var AM = " - Alex Moffat"
-My_Alert += AM
 
 var Family = "Moffat", Dad="Alex", Mom="Lisa", Son="Zan", Daughter="Grace", Dog="Albert";
 Family= Family.fontcolor("lightseagreen"), Dad= Dad.fontcolor("#6A5ACD"), Mom= Mom.fontcolor("rgb(100,149,237)"), Son= Son.fontcolor("darkblue"), Daughter= Daughter.fontcolor("#EE82EE"), Dog= Dog.fontcolor("burlywood");
 
 
-
 //========== FUNCTIONS & METHODS ==========
 
-window.alert(My_Alert);
 
 //========== EVENT FUNCTIONS ==========
+
+function doMath() {
+    // Calling the Javascript Math Random object method to generate a lucky number popup
+    var R = Math.floor((Math.random() * 100) + 1);
+    window.alert("Your lucky number is " + R);
+    
+    // assigning variables and doing basic math expressions with operands and operators
+    var A = document.getElementById("Math_Add").innerHTML;
+    A += 49 + 59 + 69;
+    var S = document.getElementById("Math_Sub").innerHTML;
+    S += 49 - 69;
+    var M = document.getElementById("Math_Mult").innerHTML;
+    M += 49 * 69;
+    var D = document.getElementById("Math_Div").innerHTML;
+    D += 49 / 7;
+    var B = (1 + 2) * 10 / 2 - 5;
+    var test1 = (1 + 2) * 10 / (2 - 5);
+    var test2 = 1 + 2 * 10 / (2 - 5);
+    var test3 = 1 + 2 * 10 / 2 - 5;
+    var Mod_Test = 25 % 6;
+    var N = -9;
+    var Inc = 5;
+    Inc++;
+    var Dec = 6.25;
+    Dec--;
+    
+    // displaying basic math expression results
+    document.getElementById("Math_Add").innerHTML = A;
+    document.getElementById("Math_Sub").innerHTML = S;
+    document.getElementById("Math_Mult").innerHTML = M;
+    document.getElementById("Math_Div").innerHTML = D;
+    document.getElementById("Math_Big").innerHTML = "(1 + 2) * 10 / 2 - 5 = " + B;
+    document.getElementById("Math_Test1").innerHTML = "(1 + 2) * 10 / (2 - 5) = " + test1;
+    document.getElementById("Math_Test2").innerHTML = "1 + 2 * 10 / (2 - 5) = " + test2;
+    document.getElementById("Math_Test3").innerHTML = "1 + 2 * 10 / 2 - 5 = " + test3;
+    document.getElementById("Math_Mod").innerHTML = "When you divide 25 by 6 you get a remainder of " + Mod_Test;
+    document.getElementById("Math_Neg").innerHTML = "A negative operator applied to -9 = " + -N;
+    document.getElementById("Math_Inc").innerHTML = "When you take 5 and increment 1 you get " + Inc.toString();
+    document.getElementById("Math_Dec").innerHTML = "When you take 6.25 and decrement 1 you get " + Dec.toString();
+    
+    // Calling the Javascript Math() object methods & displayying results
+    var P = Math.PI;
+    document.getElementById("Math_Pi").innerHTML = document.getElementById("Math_Pi").innerHTML + P;
+    document.getElementById("Math_Round").innerHTML = document.getElementById("Math_Round").innerHTML + Math.round(Math.PI);
+    document.getElementById("Math_Ceiling").innerHTML = document.getElementById("Math_Ceiling").innerHTML + Math.ceil(P);
+    document.getElementById("Math_Floor").innerHTML = document.getElementById("Math_Floor").innerHTML + Math.floor(P);
+    document.getElementById("Math_Root").innerHTML = document.getElementById("Math_Root").innerHTML + Math.sqrt(P);
+    var MP = Math.pow(5,6);
+    document.getElementById("Math_Power").innerHTML = document.getElementById("Math_Power").innerHTML + MP;
+    var V = -4.22 
+    document.getElementById("Math_Abs").innerHTML = document.getElementById("Math_Abs").innerHTML + V + " is " + Math.abs(V);
+    
+    document.getElementById("Math_Min").innerHTML = document.getElementById("Math_Min").innerHTML + Math.min(5,9,30,92,2.54,2.34,17,42,56,79,32,21);
+    document.getElementById("Math_Max").innerHTML = document.getElementById("Math_Max").innerHTML + Math.max(5,9,30,92,2.54,2.34,17,42,56,79,32,21);    
+}
 
 function clickMe() {
     var B = "I love the color purple!"; // assign variable for button text
