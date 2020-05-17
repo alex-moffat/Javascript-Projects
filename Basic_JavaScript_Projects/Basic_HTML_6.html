@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title>Basic Javascript 6</title>
+        <meta charset="utf-8">
+        <script src="./JS/Basic_JavaScript_6.js"></script>
+	</head>
+	<body onload="fillIt()">
+        <h1>Basic Javascript 6</h1>
+        <!--========== RESERVE WORD CHALLANGE ========== -->
+        <h2>Assign a variable the name of a reserve word "super".</h2> 
+        <p id="Reserve_Word">If you see this I didn't display properly.</p>
+        
+        <!--========== NESTED FUNCTION ==========-->
+        <h2 onclick="addOne()">Nested Function - Click Here</h2> 
+        <p id="Nested_Funtion">1</p>
+
+        <!--========== CHECK RIDER HEIGHT ========== -->
+        <h2>Check Rider Height</h2> 
+        <p>Riders must be at least 52 centimeters tall to ride.</p>
+        <input id="Height" value="52" style="padding: 1%; width: 20%; font-size: 120%;">
+        <button onclick="rideFunction()">
+            Click Here
+        </button> 
+        <br>
+        <p id="Ride"></p>
+        
+        <!--========== GUESS A NUMBER ==========-->
+        <!-- I did this instead of the vote excercise as I thought it would be more fun and challenging: hope you try it, my son did-->
+        <h2>Guess a number then press the button</h2> 
+        <input id="Guess" value="" placeholder="Enter a number from 1 to 100" style="padding: 1%; width: 20%; font-size: 120%;">
+        <button onclick="guessNumber()">
+            Check Your Guess
+        </button> 
+        <br>
+        <h3>Did you get it:</h3>
+        <p id="Your_Guess">You haven't guessed yet.</p>
+        <h3>How many guesses have you made:</h3>
+        <p id="Guess_Num">Goes here</p>
+        
+        <!--========== KEYWORDS & CONSTRUCTORS ==========-->
+        <h2>Keywords & Constructors</h2>
+        <button onClick="myFunction()">
+            Click Here
+        </button>
+        <br>
+        <p id="Keywords_Constructors"></p>
+        <br>
+        
+        <!--========== ADD A PERSON ==========-->
+        <h2>Add a person to the list</h2>
+        <input id="A_Name" value="" placeholder="Name" style="padding: 1%; width: 20%; font-size: 110%;"><br>
+        <input id="A_Age" value="" placeholder="Age" style="padding: 1%; width: 20%; font-size: 110%;"><br>
+        <input id="A_Gender" value="" placeholder="Gender" style="padding: 1%; width: 20%; font-size: 110%;"><br>
+        <input id="A_State" value="" placeholder="State of Residence" style="padding: 1%; width: 20%; font-size: 110%;"><br>
+        <button onClick="addPerson()">
+            Add Person
+        </button>
+        <br>
+        <h3 id="Person_Count"></h3>
+        <p id="New_and_This"></p>
+
+	</body>
+</html>
