@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title>Basic Javascript 7</title>
+        <meta charset="utf-8">
+        <script src="./JS/Basic_JavaScript_7.js"></script>
+	</head>
+	<body onload=""> <!-- calls functions after page loads -->
+        <h1>Basic Javascript 7</h1>
+        
+        <!--========== NESTED FUNCTIONS - Step 127 ===========-->
+        <h2>Nested Functions</h2> 
+        <button onclick="test127()">Click Me</button><br>
+        <p id="Counting">Jordan was right about Step 127.</p>
+        <p id="Concatenate">When a string variable is concatenated with an integer: "9" += 1 = </p>
+        
+        <!--========== LOCAL & GLOBAL VARIABLES ===========-->
+        <h2>Local & Global Variables</h2> 
+        <button onclick="testVariables()">Click Me</button><br>
+        <p id="Global_Var">Global Variable - This will change after click</p>
+        <p id="Local_Var1">Local Variable 1 - This will change after click</p>
+        <p id="Local_Var2">Local Variable 2 - This will NOT change after click</p>
+
+        <!--========== IF THEN & DATE ===========-->
+        <h2>If-Then & Date</h2> 
+        <button onclick="getTime()">Click Me</button><br>
+        <p id="Say_What">What will we say about today?</p>
+        
+        <!--========== IF THEN & KEY CHECK ===========-->
+        <h2>If-Then & Key Check</h2>
+        <p>Did you press the right key?</p>
+        <input id="Check_This" onkeyup="checkKey()" value="" placeholder="enter a letter here" style="padding: 1%; width: 20%; font-size: 120%;">
+        <br>
+        <p id="Key_Check"></p>
+
+        <!--========== IF THEN ELSE & AGE CHECK ===========-->
+        <h2>If-Then-Else & Age Check</h2>
+        <p>Enter your age below</p>
+        <input id="Check_Age" value="" style="padding: 1%; width: 20%; font-size: 120%;">
+        <button onclick="checkAge()">Check Age</button>
+        <p id="Age_Statement"></p>
+
+        <!--========== IF THEN ELSE & TIME CHECK ===========-->
+        <h2>If-Then-Else & Time Check</h2>
+        <button onclick="getTimeOfDay()">Click Me</button><br>
+        <p id="Time_Of_Day">What Time is it?</p>
+
+	</body>
+</html>
