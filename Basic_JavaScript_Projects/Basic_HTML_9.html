@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title id="title">Basic Javascript 9</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/Basic_CSS_9.css">
+        <script src="./JS/Basic_JavaScript_9.js"></script>
+	</head>
+	<body onload="loadMe()"> <!-- calls functions after page loads -->
+        <h1>Basic Javascript 9</h1>
+        
+        <!--========== ALARM ===========-->
+        <h2>ALARM</h2> 
+        <p>How many seconds would you like the alarm set for?</p>
+        <input id="Seconds" value="" placeholder="enter seconds here" style="padding: 0.5%; width: 20%; font-size: 120%;">
+        <button onclick="cdown()" style="padding: 0.5%; background-color: palegreen;">
+            Start Here
+        </button> 
+        <p id="Timer">Countdown Timer</p>
+        <br>
+        <!--========== SLIDESHOW ==========-->
+        <div class="container">
+            <!-- first img USED To size the container outside & before the individual slides -->
+            <img id="Img_0" src="./img/iceland-mountain.jpg" alt="Background">
+            
+            <!--===== SLIDE 1 =====-->
+            <div class="slide"> 
+                <img id="Img_1" src="./img/iceland-mountain.jpg" alt="Mountains">
+                <div class="text_box">
+                    <h2 id="Text_1">Caption Text</h2>   
+                </div>                
+            </div>
+            
+            <!--===== SLIDE 2 =====-->  
+            <div class="slide"> 
+                <img id="Img_2" src="./img/iceland-waterfall.jpg" alt="Waterfalls">
+                <div class="text_box">
+                    <h2 id="Text_2">Caption Text</h2>   
+                </div>                
+            </div>
+            
+            <!--===== SLIDE 3 =====-->  
+            <div class="slide"> 
+                <img id="Img_3" src="./img/iceland-beach.jpg" alt="Beaches">
+                <div class="text_box">
+                    <h2 id="Text_3">Caption Text</h2>   
+                </div>                
+            </div>
+
+            <!--===== SLIDE 4 =====-->    
+            <div class="slide"> 
+                <img id="Img_4" src="./img/iceland-aurora.jpg" alt="Aurora">
+                <div class="text_box">
+                    <h2 id="Text_4">Caption Text</h2>   
+                </div>                
+            </div>
+
+            <!--===== SLIDESHOW NAVIGATION =====-->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+            <!--===== SLIDESHOW POSITION DOTS =====-->
+            <div class="dot_container">
+                <span class="dot" onclick="setSlide(1)"></span> 
+                <span class="dot" onclick="setSlide(2)"></span> 
+                <span class="dot" onclick="setSlide(3)"></span> 
+                <span class="dot" onclick="setSlide(4)"></span> 
+            </div>
+
+        </div>
+        <br>
+
+        
+
+        <!--========== FOOTER ==========-->
+        <footer>
+            <p><small>&copy;</small> 2020 Alex Moffat &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a></p>
+        </footer>
+
+	</body>
+</html>
