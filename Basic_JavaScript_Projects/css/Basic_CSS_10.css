@@ -1,0 +1,206 @@
+/*========================================
+                TYPE
+=========================================*/
+
+* { 
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public_Sans', sans-serif;    
+    font-size: 1rem;
+    margin: 0;
+    width: 100%;    
+}
+
+footer {
+    text-decoration: none;
+    padding: 0.5%;
+    background-color: rgba(180, 154, 144, .50);
+    font-variation-settings: 'wght' 200;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;   
+}
+
+
+/*========================================
+                Text
+=========================================*/
+
+/*========== GOOGLE FONT ==========*/
+/*  To set font-weight use: font-variation-settings: 'wght' [100 - 900];  */
+@font-face {
+    font-family: 'Public_Sans';
+    src: url('../fonts/PublicSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Public_Sans_italic';
+    src: url('../fonts/PublicSans-Italic-VariableFont_wght.ttf');
+}
+
+/* Quotation elements */
+q {
+    font-family: 'Public_Sans_italic', sans-serif;    
+}
+
+
+/*========================================
+                SLIDESHOW
+=========================================*/
+
+/*===== CONTAINER - For image and overlay =====*/
+.container {
+    width: 90%;
+    /* min-width: 100%; */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;    
+}
+
+#img_0 { /* USED To size the .container outside the individual slides */
+    visibility: hidden;
+}
+
+.container img {
+    vertical-align: middle; /* place in the middle of the parent element */
+    object-fit: cover; /* make sure image maintains aspect ratio */
+    width: 100%;        
+}
+
+/*===== TEXT - Caption text */
+.text_box {
+    position: absolute;
+    color: rgba(255, 255, 255, .75);
+    font-size: 5vw;
+    font-weight: bold;
+    /* center over container & photo */
+    top: 50%; /* down 50% from top of photo */ 
+    left: 50%; /* right 50% from left of photo */
+    /* the top left corner of the text would be at the photo center */ 
+    transform: translate(-50%,-50%); /* reposition center of text to center of photo: move X axis left (-50%) of the text block width and move Y axis up (-50%) of the text block height */
+    text-align: center;
+    width: 100%;    
+}
+
+/*========================================
+                DOTS
+=========================================*/
+.dot_container {
+    position: absolute;
+    text-align: center;
+    bottom: 0; 
+    left: 50%; /* right 50% from left of photo */
+    transform: translate(-50%,0); /* reposition center of box to center of photo: move X axis left (-50%) of the text block width and move Y axis up (0) of the text block height */
+    padding: 1.5%;
+    margin-bottom: 2%;
+}
+
+.dot {
+    cursor: pointer;
+    height: 2.5vw;
+    width: 2.5vw;
+    margin: 0 .5vw;
+    background-color: rgba(245, 245, 245, .25);
+    border: 1px solid rgba(245, 245, 245, .45);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0);
+    transition: all .6s ease-in-out;
+}
+
+.active { /* JavaScript will add "active" class for active slide */
+    background-color: rgba(245, 245, 245, .60);
+    border: 1px solid rgba(245, 245, 245, .60);
+}
+
+.dot:hover, .active:hover {
+    background-color: rgba(245, 245, 245, .80);
+    border: 1px solid rgba(245, 245, 245, 1);
+    box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+}
+
+/*========================================
+                SLIDE NAVIGATION
+=========================================*/
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%); /* reposition center of box to center of photo: move X axis left (0) of the text block width and move Y axis up (-50%) of the text block height */
+    width: auto;
+    padding: 1vw 2vw;    
+    color: rgba(245, 245, 245, .40);
+    font-weight: bold;
+    font-size: 4vw;
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+    user-select: none; /* block the selection of the text itself */
+}
+
+/* left side button only */
+.prev { 
+    left: 0;
+    border-radius: 0 .5vw .5vw 0;
+}
+
+/* right side button only */
+.next { 
+    right: 0;
+    border-radius: .5vw 0 0 .5vw;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.4);    
+}
+  
+/*========================================
+                SLIDE ANIMATION
+=========================================*/
+
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;    
+}
+
+/*========== FADE OUT */
+.slide {
+    opacity: 0;
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    -webkit-animation-name: fadeOut;
+    -webkit-animation-duration: 2s;
+}
+@keyframes fadeOut {
+    from {opacity: 1} 
+    to {opacity: 0}
+}
+@-webkit-keyframes fadeOut {
+    from {opacity: 1} 
+    to {opacity: 0}
+}
+
+/*========== FADE IN - add "current" class for active slide */
+.current {
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 2s;
+}
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
