@@ -34,7 +34,7 @@ a {
 table {
     width:620px;
     margin: 0 auto;
-    box-shadow: 5px 4px 15px -2px rgba(0,0,0,0,.5);
+    box-shadow: 5px 4px 15px -2px rgba(0,0,0,.5);
     border-radius: 10px;
     float: left;
     background-color: #e5e6e8;
@@ -183,16 +183,16 @@ h1 {
     color: #fff;
     text-shadow: 2px 2px 2px rgba(0,0,0,0,.2);
     border: 2px solid rgb(62, 117, 62);
-    background-color: rgb(119, 163, 104);
+    background-color: rgb(77, 173, 45);
     margin: 20px 0px 0px 20px; /* alter left margin to fix alignment */
     padding: 12px 14px;
-    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.95), 3px 3px 15px -4px rgba(0,0,0,0,.5);
+    box-shadow: inset 2px 2px 3px -2px rgba(255,255,255,.5), 3px 3px 15px -4px rgba(0,0,0,.5);
     border-radius: 10px;
 }
 #Btn_Start:hover {
     border: 2px solid rgb(25, 48, 25);
     background-color: rgb(0, 143, 0);
-    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.65);
+    box-shadow: inset 3px 3px 15px -2px rgba(0,0,0,.65);
     transition: box-shadow 0.2s ease-in-out;    
 }
 
@@ -202,18 +202,18 @@ h1 {
     font-size: 1em;
     font-weight: bold;
     color: #fff;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0,.2);
+    text-shadow: 2px 2px 2px rgba(0,0,0,.2);
     border: 2px solid rgb(109, 16, 0);
     background-color: rgb(179, 78, 78);
     margin: 20px 20px 0px 20px; /* alter left margin to fix alignment */
     padding: 12px 14px;
-    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.95), 3px 3px 15px -4px rgba(0,0,0,0,.5);
+    box-shadow: inset 2px 2px 3px -2px rgba(255,255,255,.5), 3px 3px 15px -4px rgba(0,0,0,.5);
     border-radius: 10px;
 }
 #Btn_Stop:hover {
     border: 2px solid rgb(51, 8, 0);
     background-color: rgb(206, 27, 27);
-    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.65);
+    box-shadow: inset 3px 3px 15px -2px rgba(0,0,0,.65);
     transition: box-shadow 0.2s ease-in-out;    
 }
 

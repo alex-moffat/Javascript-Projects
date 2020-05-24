@@ -1,0 +1,142 @@
+/*========================================
+                TYPE
+=========================================*/
+
+html {
+    box-sizing: border-box;
+    font-size: 70%;
+}
+
+*, *::before, *::after{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Public_Sans', sans-serif;    
+    /* font-size: 1rem; */
+    margin: 0;
+    width: 100%;    
+}
+
+footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.5%;
+    background-color: rgba(180, 154, 144, .50);
+    font-variation-settings: 'wght' 200;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;   
+}
+
+/*========================================
+                Text
+=========================================*/
+
+/*========== GOOGLE FONT ==========*/
+/*  To set font-weight use: font-variation-settings: 'wght' [100 - 900];  */
+@font-face {
+    font-family: 'Public_Sans';
+    src: url('../fonts/PublicSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Public_Sans_italic';
+    src: url('../fonts/PublicSans-Italic-VariableFont_wght.ttf');
+}
+
+/* Quotation elements */
+q {
+    font-family: 'Public_Sans_italic', sans-serif;    
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 2%;
+}
+
+/*========================================
+                FORMATTING
+=========================================*/
+
+.Calc {
+    border: 1.2px solid darkslategray;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px
+}
+
+.Calc_Screen {
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    border: none;
+    background-color: black;
+    color: white;
+    text-align: right;
+    padding: 0px 20px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+button {
+    height: 70px;
+    border-radius: 3px;
+    border: 1px solid darkslategray;
+    background-color: transparent;
+    font-size: 3.2rem;
+    color: black;
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0,0,0,.1));
+    text-shadow: 0px 1px rgba(255,255,255,.4);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.1), inset 0 1px 0 0 rgba(255,255,255,.1), inset 0 -1px 0 0 rgba(255,255,255,.1), 0 1px 0 0 rgba(255,255,255,.1);
+}
+
+button:hover {
+    background-color: #e1e1e1;
+}
+
+.Operator {
+    color: black;
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0,0,0,.5));
+    background-color: lightgray;
+}
+
+.All_Clear {
+    background-color: red;
+    border: darkslategray;
+    color: #ffffff;
+}
+
+.All_Clear:hover {
+    background-color: darkred;    
+}
+
+.Equal {
+    background-color: blue;
+    border: darkslategray;
+    color: #ffffff;
+    height: 100%;
+    grid-area: 2 / 4 / 6 / 5; /* The grid-area property specifies a grid item's size and location in a grid layout, and is a shorthand property for the following properties: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+}
+
+.Equal:hover {
+    background-color: darkblue;
+}
+
+.Calc_Keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* makes 4 equal columns with each column as 1fr (fraction) of 4 columns or 25% */
+    grid-gap: 20px;
+    padding: 20px;
+}

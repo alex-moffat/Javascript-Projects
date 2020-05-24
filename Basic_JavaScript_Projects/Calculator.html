@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title id="title">Calculator</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Alex_Moffat">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/Calculator_CSS.css">
+        <script src="./JS/Calculator_JavaScript.js"></script>
+	</head>
+	<body onload="loadMe()"> <!-- calls functions after page loads -->
+        <h1>Calculator</h1>
+        <!--========== CALCULATOR ==========-->
+        <div class="Calc">
+            <input type="text" class="Calc_Screen" value="0" disabled>
+            <div class="Calc_Keys">
+                <button type="button" class='Operator' value='+'>+</button>
+                <button type="button" class='Operator' value='-'>-</button>
+                <button type="button" class='Operator' value='*'>&times;</button>
+                <button type="button" class='Operator' value='/'>&divide;</button>
+
+                <button type="button" value='7'>7</button>
+                <button type="button" value='8'>8</button>
+                <button type="button" value='9'>9</button>
+
+                <button type="button" value='4'>4</button>
+                <button type="button" value='5'>5</button>
+                <button type="button" value='6'>6</button>
+
+                <button type="button" value='1'>1</button>
+                <button type="button" value='2'>2</button>
+                <button type="button" value='3'>3</button>
+
+                <button type="button" value='0'>0</button>
+
+                <button type="button" class='Decimal' value='.'>.</button>
+                <button type="button" class='All_Clear' value='All_Clear'>AC</button>
+                <button type="button" class='Equal' value='='>=</button>                
+            </div>
+        </div>        
+
+        <!--========== FOOTER ==========-->
+        <footer>
+            <p><small>&copy;</small> 2020 Alex Moffat &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a></p>
+        </footer>
+
+	</body>
+</html>

@@ -131,7 +131,7 @@ function btnEnabled(btn) {
     if (btn.id == "Btn_Start") {
         btn.style.color = "#fff";
         btn.style.border = "2px solid rgb(62, 117, 62)";
-        btn.style.backgroundColor = "rgb(119, 163, 104)";
+        btn.style.backgroundColor = "rgb(77, 173, 45)";
     } else {
         btn.style.color = "#fff";
         btn.style.border = "2px solid rgb(109, 16, 0)";
@@ -465,44 +465,39 @@ function winner(winDetected, winCon) {
 //========== glowBoard() - make winning squares light up
 function glowBoard(pos) {
     // ASSIGN VARIABLES - make adjustment for element class "Square" array
-    var index0 = pos[0] - 1;
-    var index1 = pos[1] - 1;
-    var index2 = pos[2] - 1;
+    var index0 = pos[0];
+    var index1 = pos[1];
+    var index2 = pos[2];
     var winArray = [index0, index1, index2];
     var squareArray = document.getElementsByClassName('Square');
-    blink();
     winSound();
-    //===== blink backgrounds of winning squares - iterate through winArray to set the 3 squareArray elements
+     
+    //===== blink backgrounds of winning squares & webpage background - iterate through winArray to set the 3 squareArray elements
+    blink(document.getElementById('Body'));
     for (let i=0; i<winArray.length;i++) {
-        var bg = squareArray[winArray[i]]; // the squareArray index is the value at the winArray i index position
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 100);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 200);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 300);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 400);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 500);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 600);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 700);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 800);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 900);
-        setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 900);
-        setTimeout(function() {bg.style.backgroundColor = '#d7f3f7';}, 1100);
+        console.log(squareArray[winArray[i]].id);
+        blink(squareArray[winArray[i]]); // the squareArray index is the value at the winArray i index position
     } 
 }
 
-//========== blink() - make <body> background change colors
-function blink() {
-    var bg = document.getElementById('Body');
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 100);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 200);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 300);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 400);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 500);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 600);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 700);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 800);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 900);
-    setTimeout(function() {bg.style.backgroundColor = randomRGB();}, 1000);
-    setTimeout(function() {bg.style.backgroundColor = '#ffffff';}, 1100);
+//========== blink() - make Square or Body element blink - parameter is the element 
+function blink(e) {
+    if (e.id == "Body") { // webpage element
+        var finalColor = '#ffffff';
+    } else { // Square element
+        var finalColor = '#d7f3f7';
+    }
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 100);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 200);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 300);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 400);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 500);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 600);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 700);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 800);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 900);
+    setTimeout(function() {e.style.backgroundColor = randomRGB();}, 900);
+    setTimeout(function() {e.style.backgroundColor = finalColor;}, 1100);
 }
 
 function randomRGB() {
