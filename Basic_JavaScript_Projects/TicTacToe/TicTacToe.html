@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title id="title">TicTacToe</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/TicTacToe.css">              
+	</head>
+	<body id="Body"> <!-- calls functions after page loads -->
+        <h1>TicTacToe</h1>
+        <br>
+        <!--========== AUDIO ==========-->
+        <audio id="Place_Avatar">
+            <source src="./audio/placeAvatar.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="Win_Game">
+            <source src="./audio/winGame.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="Tie_Game">
+            <source src="./audio/tieGame.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="Dice_Roll">
+            <source src="./audio/diceRoll.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!--========== GAME ==========-->
+        <div id="Shell">
+            <!-- GAME MESSAGE-->
+            <div id="gameMsgBox" onClick="hideGameMsg()">
+                <p id="gameMsg"></p>
+            </div>
+            
+            <!--========== LEFT CONSOLE ==========-->
+            <div class="Console_Left">
+                <div class="Display_Box Box_Left">
+                    <strong>Current Config:</strong><br><br>
+                    <label>Player 1: &nbsp;&nbsp;<span id="P1_Display">O</span></label>
+                    <label>Player 2: &nbsp;&nbsp;<span id="P2_Display">X</span></label>
+                </div>
+                <div class="">
+                    <button id="Btn_Start" onclick="startGame()">Start Game</button>
+                </div>
+                <div id="Board_State"></div>
+                <div id="Controls">
+                    <div id="Message_Frame">
+                        <p id="Show_Header">Active Player: </p>
+                        <p id="Show_Player">Game Stopped</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--========== TABLE ==========-->
+            <table>
+                <!--========== ROW 1 -->
+                <tr>
+                    <!--===== Square_1 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_1" data-square="1" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--===== Square_2 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_2" data-square="2" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--===== Square_3 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_3" data-square="3" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--========== ROW 2 -->
+                <tr>
+                    <!--===== Square_4 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_4" data-square="4" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--===== Square_5 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_5" data-square="5" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--===== Square_6 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_6" data-square="6" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+                <!--========== ROW 3 -->
+                <tr>
+                    <!--===== Square_7 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_7" data-square="7" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--===== Square_8 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_8" data-square="8" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <!--===== Square_9 -->
+                    <td>
+                        <div class="photo-container">
+                            <div id="Square_9" data-square="9" class="Square" onClick="squareAnimate(this)">
+                                <div class="O"></div>
+                                <div class="X"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            
+            <!--========== RIGHT CONSOLE ==========-->
+            <div class="Console_Right">
+                <div class="Display_Box Box_Right">
+                    <strong>Configuration:</strong><br><br>
+                    <label for="Player_1">Player 1: </label>
+                    <select id="Player_1"> 
+                        <option value="O" selected>O</option>
+                        <option value="X">X</option>
+                    </select> 
+                    <label for="Player_2">Player 2: </label>
+                    <select id="Player_2"> 
+                        <option value="X" selected>X</option>
+                        <option value="O">O</option>
+                    </select>
+                    <button onClick="saveSettings()">Save Config</button>   
+                </div>
+                <div id="Controls">
+                    <button id="Btn_Stop" onclick="stopGame()">Stop Game</button>
+                </div>                
+            </div>
+
+
+        </div>
+        <Script>
+            var arrayO = document.getElementsByClassName("O");
+            var arrayX = document.getElementsByClassName("X");
+            for (let i=0; i<arrayO.length; i++) {
+                arrayO[i].style.transform = "translateY(-100%)";                
+            }
+            for (let i=0; i<arrayX.length; i++) {
+                arrayX[i].style.transform = "translateY(100%)";                
+            }
+
+        </Script>
+
+        <script src="./JS/TicTacToe.js"></script>
+
+        <!--========== FOOTER ==========-->
+        <footer>
+            <p><small>&copy;</small> 2020 Alex Moffat &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a></p>
+        </footer>
+
+	</body>
+</html>

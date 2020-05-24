@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title id="title">HTML_2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/CSS_2.css">
+        <script src="./JS/JavaScript_2.js"></script>
+	</head>
+	<body onload="loadMe()"> <!-- calls functions after page loads -->
+        <h1>HTML_2</h1>
+        
+        <!--========== FORM VALIDATION ==========-->
+        <h3>FORM VALIDATION</h3>
+        <div class="container text_box_pad margin_bottom background"> 
+            <h2 class="center_text pad_bottom">Contact</h2>
+            <div class="contactForm">
+                <form name="contactForm" action="" method="POST" onsubmit="return validateForm()">
+                    <label class="label" for="name">Name</label><br>
+                        <input id="name" name="name" class="rsvp" type="text" value="" placeholder="First and Last Name"><br>
+                    <label class="label" for="email">Email</label><br>
+                        <input id="email" name="email" class="rsvp" type="email" value="" placeholder="Please enter your email here"><br>
+                    <label class="label" for="message">Message</label><br>
+                        <input id="message" name="message" class="rsvp" type="text" value="" placeholder="Please write your message here"><br>
+                    <br>
+                    <div>
+                        <input class="form_submit" type="submit" value="Submit">									
+                    </div>
+                </form>
+            </div>                
+        </div>
+        
+
+
+
+        <!--========== FOOTER ==========-->
+        <footer>
+            <p><center><small>&copy;</small> 2020 Alex Moffat &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a></center></p>
+        </footer>
+
+	</body>
+</html>

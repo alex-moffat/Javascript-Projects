@@ -1,0 +1,311 @@
+/*========================================
+                TYPE
+=========================================*/
+
+* { 
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public_Sans', sans-serif;    
+    font-size: 1rem;
+    margin: 0;
+    background-color: #ffffff;      
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-decoration: none;
+    padding: 0.5%;
+    background-color: rgba(180, 154, 144, .50);
+    font-variation-settings: 'wght' 200;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;   
+}
+
+/*========== TABLE ==========*/
+table {
+    width:620px;
+    margin: 0 auto;
+    box-shadow: 5px 4px 15px -2px rgba(0,0,0,0,.5);
+    border-radius: 10px;
+    float: left;
+    background-color: #e5e6e8;
+}
+
+td {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 4px groove #e5e6e8;
+}
+
+table tr:nth-child(-n+3) td:nth-child(-n+3) {
+    background-color: #d7f3f7;
+}
+table tr:nth-child(-n+3) td:nth-child(-n+3):hover {
+    background-color: #e5fbff;
+}
+
+table tr:nth-child(1) td:nth-child(1) {
+    border-radius: 10px 0px 0px 0px;
+}
+table tr:nth-child(1) td:nth-child(3) {
+    border-radius: 0px 10px 0px 0px;
+}
+table tr:nth-child(3) td:nth-child(3) {
+    border-radius: 0px 0px 10px 0px;
+}
+table tr:nth-child(3) td:nth-child(1) {
+    border-radius: 0px 0px 0px 10px;
+}
+
+/*========================================
+                Text
+=========================================*/
+
+/*========== GOOGLE FONT ==========*/
+/*  To set font-weight use: font-variation-settings: 'wght' [100 - 900];  */
+@font-face {
+    font-family: 'Public_Sans';
+    src: url('../fonts/PublicSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Public_Sans_italic';
+    src: url('../fonts/PublicSans-Italic-VariableFont_wght.ttf');
+}
+
+/* Quotation elements */
+q {
+    font-family: 'Public_Sans_italic', sans-serif;    
+}
+
+h1 {
+    text-align: center;
+    margin: 2%;
+}
+
+/*========================================
+                ID
+=========================================*/
+#Shell {
+    width:970px;
+    margin: 0 auto;
+}
+
+#gameMsgBox {
+    cursor: pointer;
+    display: none;
+    width: 500px;
+    height: 340px;
+    position: absolute;
+    text-align: center;
+    margin: 140px 0 0 230px;
+    z-index: 100;
+    background-color: rgba(232,236,242,.95);
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 25px -4px rgba(0,0,0,.5);
+}
+
+#gameMsgBox #gameMsg {
+    cursor: pointer;
+    margin: 4% auto;
+    text-align: center;
+    color: darkblue;
+    font-weight : bold;
+    font-size: 45px;
+}
+
+#Controls {
+    width: 200px;
+    float: center;
+    margin: auto;
+}
+
+#Message_Frame {
+    width: 125px;
+    height: 80px;
+    text-align: center;
+    margin: 350px 0px 0px 20px;
+    box-shadow: 5px 5px 25px -4px rgba(0,0,0,.65);
+    border-radius: 10px;
+}
+
+#Show_Header {
+    margin: 0px;
+    font-variant: small-caps;
+    color: white;
+    width: 125px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 7px 0px 0px 0px;
+    background-color: #212270;
+    border: 2px solid black;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#Show_Player {
+    margin: 0px;
+    font-variant: small-caps;
+    color: red;
+    width: 125px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    padding: 7px 0px 0px 0px;
+    border: 2px solid black;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#Board_State { /* make invisible - used for record keeping */
+    display: none; 
+    font-size: 10px;
+    margin: 10px auto;
+    float: left;
+}
+
+#Btn_Start {
+    float: center; /* add to center button under display box above */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0,.2);
+    border: 2px solid rgb(62, 117, 62);
+    background-color: rgb(119, 163, 104);
+    margin: 20px 0px 0px 20px; /* alter left margin to fix alignment */
+    padding: 12px 14px;
+    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.95), 3px 3px 15px -4px rgba(0,0,0,0,.5);
+    border-radius: 10px;
+}
+#Btn_Start:hover {
+    border: 2px solid rgb(25, 48, 25);
+    background-color: rgb(0, 143, 0);
+    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.65);
+    transition: box-shadow 0.2s ease-in-out;    
+}
+
+#Btn_Stop {
+    float: center; /* add to center button under display box above */
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0,.2);
+    border: 2px solid rgb(109, 16, 0);
+    background-color: rgb(179, 78, 78);
+    margin: 20px 20px 0px 20px; /* alter left margin to fix alignment */
+    padding: 12px 14px;
+    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.95), 3px 3px 15px -4px rgba(0,0,0,0,.5);
+    border-radius: 10px;
+}
+#Btn_Stop:hover {
+    border: 2px solid rgb(51, 8, 0);
+    background-color: rgb(206, 27, 27);
+    box-shadow: inset 3px 3px 15px -2px rgba(255,255,255,.65);
+    transition: box-shadow 0.2s ease-in-out;    
+}
+
+
+/*========================================
+                FORMATTING
+=========================================*/
+
+.photo-container {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+.Square {
+    height: 200px;
+    width: 200px;
+}
+
+.O {
+    transition: transform .3s;
+    opacity: 1;
+    position: absolute;
+    background-image: url("../img/avatarO.png");
+    width: 200px;
+    height:200px;
+    transform: translateY(-100%);
+}
+
+.X {
+    transition: transform .3s;
+    opacity: 1;
+    position: absolute;
+    background-image: url("../img/avatarX.png");
+    width: 200px;
+    height:200px;
+    transform: translateY(100%);
+}
+
+.Console_Left {
+    width: 160px;
+    height: 600px;
+    margin: 0px 0px 0px 10px;
+    float:left;
+}
+
+.Console_Right {
+    width: 160px;
+    height: 700px;
+    margin: 0px auto;
+    float:left;
+}
+
+.Display_Box {
+    background-color: rgba(53,35,142,.95);
+    color: white;
+    font-weight: bold;
+    border: 3px solid black;
+    padding: 2%;
+    box-shadow: 5px 5px 25px -4px rgba(0,0,0,.65);
+    border-radius: 10px;
+}
+
+.Display_Box:hover {
+    background-color: rgba(53,35,142,.88);
+}
+
+.Box_Left {
+    float:left;
+    margin: 0px 0px 0px 20px;
+    width: 120px;
+    height: 120px;
+}
+
+.Box_Right {
+    float:right;
+    margin: 0px 20px 0px 0px;
+    width: 120px;
+    height: 140px;
+}
+
+.Box_Right>button {
+    cursor: pointer;
+    margin: 10px 10px 10px 10px;
+    width: 90px;
+    height: 25px; 
+    background-color: rgba(214,212,212,.95);
+    border: 1px solid rgba(0,0,0,.65);
+    border-radius: 10px;
+}
+.Box_Right>button:hover {
+    background-color: rgba(237,234,234,.95);
+    border: 1px solid rgba(0,0,0,.85);
+    box-shadow: 3px 3px 15px -4px rgba(0,0,0,.65);
+}

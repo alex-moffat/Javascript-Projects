@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title id="title">HTML_3</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/CSS_2.css">
+        <script src="./JS/JavaScript_3.js"></script>
+	</head>
+	<body onload="loadMe()"> <!-- calls functions after page loads -->
+        <h1>HTML_3</h1>
+        
+        <!--========== DATA ATTRIBUTE ==========-->
+        <h3>DATA ATTRIBUTE</h3>
+        <p>Click on one of pet names below to find out more information.</p>
+        <ul style="padding 1%; line-height: 1.5rem; cursor: pointer;">
+            <li onClick="getDescription(this)" data-animal="dog" data-breed="norwich terrier" data-age="11 year" data-gender="male" data-love="play football">Albert</li>
+            <li onClick="getDescription(this)" data-animal="cat" data-breed="balinese" data-age="9 month" data-gender="female" data-love="watch the bird feeder">Zuli</li>
+            <li onClick="getDescription(this)" data-animal="snake" data-breed="ball python" data-age="2 year" data-gender="male" data-love="eat mice">Barbus</li>
+            <li onClick="getDescription(this)" data-animal="chicken" data-breed="silver wyandotte" data-age="1 year" data-gender="female" data-love="lay eggs">Plurp</li>
+        </ul>
+        <br>
+        <p id="Description_Text"></p>
+        
+
+        <!--========== FOOTER ==========-->
+        <footer>
+            <p><small>&copy;</small> 2020 Alex Moffat &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a></p>
+        </footer>
+
+	</body>
+</html>

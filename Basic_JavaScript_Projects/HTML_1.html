@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title id="title">HTML_1</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="./JS/JavaScript_1.js"></script>
+	</head>
+	<body onload="loadMe()"> <!-- calls functions after page loads -->
+        <h1>HTML_1</h1>
+        
+        <!--========== SWITCH ===========-->
+        <h3>SWITCH</h3>
+        <h4>What is your favorite color?</h4>
+        <p>Pick your favorite color from this list: </p>
+        <ul>
+            <li style="color:red; font-weight: bold;">Red</li>
+            <li style="color:yellow; font-weight: bold;">Yellow</li>
+            <li style="color:green; font-weight: bold;">Green</li>
+            <li style="color:blue; font-weight: bold;">Blue</li>
+            <li style="color:pink; font-weight: bold;">Pink</li>
+            <li style="color:purple; font-weight: bold;">Purple</li>
+        </ul>
+        <input id="Input_Color" type="text" value="" placeholder="enter your color choice here" style="padding: 0.5%; width: 20%; font-size: 120%;">
+        <button onclick="enterColor()" style="padding: 0.5%; background-color: palegreen;">
+            Click Me
+        </button> 
+        <p id="Output_Color"></p>
+        <br>
+        
+        <!--========== GET ELEMENTS BY CLASS NAME ===========-->
+        <h3>GET ELEMENTS BY CLASS NAME</h3>
+        <p>Select a list item to change and click button.</p>
+        <ol>
+            <li class="Start_Class">Starting text that you can change.</li>
+            <li class="Start_Class">Starting text that you can change.</li>
+            <li class="Start_Class">Starting text that you can change.</li>
+            <li class="Start_Class">Starting text that you can change.</li>
+            <li class="Start_Class">Starting text that you can change.</li>
+        </ol>
+        <input id="Input_Class" type="number" value="" min="1" max="5" placeholder="number" style="padding: 0.5%; width: 10%; font-size: 120%;">
+        <button onclick="changeClass()" style="padding: 0.5%; background-color: palegreen;">
+            Make Change
+        </button> 
+        <p id="Input_Again"></p>
+        <br>
+
+        <!--========== CANVAS ===========-->
+        <h3>CANVAS</h3>
+        <button onclick="makeDrawing()" style="padding: 0.5%; background-color: palegreen;">
+            Make Drawing
+        </button>
+        <br> 
+        <canvas id="Canvas_1" width="400" height="400" style="border: 3px double darkslateblue; box-shadow: 3px 3px 8px rgba(0, 0, 0, .5); background-color: rgb(241, 241, 252); margin:5%;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+        <br>
+
+        <!--========== FOOTER ==========-->
+        <footer>
+            <p><center><small>&copy;</small> 2020 Alex Moffat &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a></center></p>
+        </footer>
+
+	</body>
+</html>
