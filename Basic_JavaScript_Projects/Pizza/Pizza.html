@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <link rel="icon" href="./img/logo/AM Logo_Knockout_white.png" type="image/gif" sizes="16x16 32x32">
+        <title id="title">Pizza Demo</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Alex_Moffat">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/Pizza_CSS.css">  
+        <script src="./JS/Pizza_JavaScript.js"></script>      
+	</head>
+	<body onload="loadMe()"> <!-- calls functions after page loads -->
+        <!--========== PIZZA ==========-->
+        <div id="Menu_BG">
+            <h1>Pizza Drill Tutorial</h1>
+            <input id="Btn_Order" type="button" onClick="getReceipt()" value="Place Order">
+            <form id="Menu_Form">
+                <!--========== MENU LEFT ==========-->
+                <div class="Menu Left">
+                    <h3>Size:</h3>
+                    <input class="Size" type="radio" name="Size" value="Personal Pizza">Personal Pizza<br>
+                    <input class="Size" type="radio" name="Size" value="Small Pizza">Small Pizza<br>
+                    <input class="Size" type="radio" name="Size" value="Medium Pizza">Medium Pizza<br>
+                    <input class="Size" type="radio" name="Size" value="Large Pizza">Large Pizza<br>
+                    <input class="Size" type="radio" name="Size" value="Extra Large Pizza">Extra Large Pizza<br>
+                </div>
+
+                <!--========== MENU CENTER ==========-->
+                <div class="Menu Center">
+                    <h3>Vegetables:</h3>
+                    <input class="Vegi" type="checkbox" name="Topping" value="Mushrooms">Mushrooms<br>
+                    <input class="Vegi" type="checkbox" name="Topping" value="Onions">Onions<br>
+                    <input class="Vegi" type="checkbox" name="Topping" value="Tomatos">Tomatos<br>
+                    <input class="Vegi" type="checkbox" name="Topping" value="Olives">Olives<br>
+                    <input class="Vegi" type="checkbox" name="Topping" value="Green Peppers">Green Peppers<br>                    
+                </div>
+
+                <!--========== MENU RIGHT ==========-->
+                <div class="Menu Right">
+                    <h3>Meats:</h3>
+                    <input class="Meats" type="checkbox" name="Topping" value="Pepperoni">Pepperoni<br>
+                    <input class="Meats" type="checkbox" name="Topping" value="Sausage">Sausage<br>
+                    <input class="Meats" type="checkbox" name="Topping" value="Canadian Bacon">Canadian Bacon<br>
+                    <input class="Meats" type="checkbox" name="Topping" value="Ground Beef">Ground Beef<br>
+                    <input class="Meats" type="checkbox" name="Topping" value="Anchovy">Anchovy<br>
+                    <input class="Meats" type="checkbox" name="Topping" value="Chicken">Chicken<br>
+                    <input class="Meats" type="checkbox" name="Topping" value="Salami">Salami<br>
+                </div>
+
+                <!--========== CART ==========-->
+                <div id="Cart">
+                    <div id="Show_Text"></div>
+                    <div id="Total_Price"></div>
+                </div>
+            </form>            
+        </div>       
+
+        <!--========== FOOTER ==========-->
+        <footer>
+            <p><small>&copy;</small> 2020 Alex Moffat &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a></p>
+        </footer>
+        <!--========== SCRIPT - needs to be here for event listeners to function ==========-->
+        
+	</body>
+</html>

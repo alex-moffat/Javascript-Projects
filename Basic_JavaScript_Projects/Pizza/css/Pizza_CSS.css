@@ -1,0 +1,140 @@
+/*========================================
+                TYPE
+=========================================*/
+
+html {
+    box-sizing: border-box;    
+}
+
+body {
+    font-family: 'Public_Sans', sans-serif;    
+    /* font-size: 1rem; */
+    width: 100%;
+    background-color: blue;    
+}
+
+footer {
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: .8rem;
+    text-decoration: none;
+    padding: 0.5%;
+    background-color: rgba(180, 154, 144, .50);
+    font-variation-settings: 'wght' 200;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;   
+}
+
+h1 {
+    font-family: 'comic sans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem; 
+    color: white; 
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+h3 {
+    font-family: 'Public_Sans', sans-serif;
+    color: white;          
+}
+
+div {
+    font-family: 'Public_Sans', sans-serif;
+    color: white; 
+}
+
+/*========================================
+                FONT
+=========================================*/
+
+/*========== GOOGLE FONT ==========*/
+/*  To set font-weight use: font-variation-settings: 'wght' [100 - 900];  */
+@font-face {
+    font-family: 'Public_Sans';
+    src: url('../fonts/PublicSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Public_Sans_italic';
+    src: url('../fonts/PublicSans-Italic-VariableFont_wght.ttf');
+}
+
+/* Quotation elements */
+q {
+    font-family: 'Public_Sans_italic', sans-serif;    
+}
+
+
+
+/*========================================
+                CLASSES
+=========================================*/
+
+.Menu {
+    display: inline-block;
+    width: 200px;
+    height: 200px;    
+}
+
+.Left {
+    float:left;
+}
+
+.Right {
+    float:right;
+}
+
+/*========================================
+                IDS
+=========================================*/
+
+#Menu_BG {
+    width: 600px;
+    height: 470px;
+    margin: 10px auto;           
+}
+
+#Menu_Form {
+    width: 600px;
+    height: 200px;    
+}
+
+#Total_Price {
+    width: 600px;
+    height: 190px;
+    margin: 0 auto;
+    float: right;
+}
+
+#Show_Text {
+    width: 200px;
+    margin: 0 auto;
+    float: left;
+}
+
+#Cart {
+    top:0;
+    width: 600px;
+    height: 200px;
+    margin: 0px auto;    
+}
+
+#Btn_Order {
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    width: 100px;
+    height: 40px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid darkblue;
+    border-radius: .5vw; 
+    box-shadow: 2px 2px 8px black;         
+}
