@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+            </div>
+            <p id='S0'></p>
+            <p id='S1'></p>
+            <p id='S2'></p>
+            <p id='S3'></p>
+            <p id='S4'></p>
+            
+            <p id="XML_2"></p>
+		<script type="text/javascript">
+            //========== STEP 1: Setup the XML HTTP request object
+            var ajax = new XMLHttpRequest();
+            var ajax2 = new XMLHttpRequest();
+
+            //========== STEP 2: Prepare the open AJAX request
+            ajax.open('GET', 'content.html');
+            ajax2.open('GET', 'content2.html');
+            console.log("readyState = " + ajax2.readyState + " and Status = " + ajax2.status + ": " + ajax2.statusText);
+            
+            //========== STEP 3: Define the AJAX response callback method
+            ajax.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) { // 4 = request finished , 200 = OK
+                    document.getElementById('content').innerHTML = ajax.responseText;
+                }
+            }
+
+            ajax2.onreadystatechange = function() {
+                console.log("readyState = " + this.readyState + " and Status = " + this.status + ": " + this.statusText);
+                switch (this.readyState) {
+                    case 0:
+                        document.getElementById('S0').innerHTML = this.readyState;
+                        break;
+                    case 1:
+                        document.getElementById('S1').innerHTML = this.readyState;
+                        break;
+                    case 2:
+                        document.getElementById('S2').innerHTML = this.readyState;
+                        break;
+                    case 3:
+                        document.getElementById('S3').innerHTML = this.readyState;
+                        break;
+                    case 4:
+                        document.getElementById('S4').innerHTML = this.readyState;
+                        document.getElementById('XML_2').innerHTML = this.responseText;
+                        break;
+                    default:
+                        console.log("switch default case, readyState = " + this.readyState); 
+                }                
+            }
+
+            //========== STEP 4: Send the AJAX request for data
+            function getContent() {
+                ajax.send();
+                ajax2.send();
+                document.getElementById('btn_content').style.display = 'none';
+            }
+
+		</script>
+    </body>
+</html>
