@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                <title id="title">jQuery Exercises</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <meta name="description" content="This document is for the Tech Academy JQuery Exercises.">
+                <meta name="keywords" content="HTML, CSS, JavaScript, jQuery">
+                <meta name="author" content="Alex Moffat">
+                <link rel="icon" href="./favicon.ico" type="image/x-icon">
+                <link rel="stylesheet" type="text/css" href="../css/Misc.css">
+                <script src="../JS/Misc.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>                
+        </head>
+        <script>
+                $(document).ready(function() { /* $ REPLACED SYNTAX jQuery('element').function() */
+                        $("html").append(
+                                "<body>\
+                                        <div id='container'>\
+                                                <div id='inner'>\
+                                                        <h1 id='Doc_Title'>Basic jQuery</h1>\
+                                                        <p id='p_1'>Paragraph 1</p>\
+                                                        <p id='p_2'>Paragraph 2</p>\
+                                                        <p id='p_3'>Paragraph 3</p>\
+                                                </div>\
+                                        </div>\
+                                        <!--========== PHOTOS ==========-->\
+                                        <div id='container_photo'>\
+                                                <div id='photo_blocks'>\
+                                                        <img class='imgThumb' id='img_1' src='./img/iceland-aurora.jpg' alt='Aurora'>\
+                                                        <img class='imgThumb' id='img_2' src='./img/iceland-beach.jpg' alt='Beach'>\
+                                                        <img class='imgThumb' id='img_3' src='./img/iceland-mountain.jpg' alt='Mountain'>\
+                                                        <img class='imgThumb' id='img_4' src='./img/iceland-waterfall.jpg' alt='Waterfall'>\
+                                                </div>\
+                                                <h2 id='photo_caption'></h2>\
+                                        </div>\
+                                </body>"
+                        );
+                        $("#p_2").css({"color":"red"});
+                        $("#p_3").click(function() {
+                                $('h1').hide();
+                        });
+                        
+                        getTitle(); /* can call custom functions that target elements created by jQuery */
+                        /*========== PHOTO ANIMATION ==========*/
+                        $("#photo_caption").hide(0);
+                        $("#container_photo").css({
+                                'width':'100%',
+                                'position':'relative',
+                                'margin-left':'auto',
+                                'margin-right':'auto',
+                                'text-align':'center'
+                        });
+                        $("#photo_blocks").css({
+                                'display':'inline-block'
+                        });
+                        $(".imgThumb").css({
+                                'width':'24%',
+                                'margin':'.5%',
+                                'box-shadow':'2px 2px 4px rgba(0,0,0,.2)',
+                                'float':'left',
+                                'opacity':'.5'
+                        });                      
+                        $(".imgThumb").on({
+                                'click': function(eventObject) {
+                                        console.log("You clicked on " + this.alt);
+                                },
+                                'mouseenter': function(eventObject) {
+                                        $(this).fadeTo(500,1);
+                                        $('#photo_caption').html(this.alt);
+                                        $('#photo_caption').fadeIn(500);
+                                        $(this).css({'box-shadow':'4px 4px 8px rgba(0,0,0,.6)'}, 500);
+                                },
+                                'mouseleave': function(eventObject) {
+                                        $(this).fadeTo(500,.5);
+                                        $('#photo_caption').fadeOut(250);
+                                        $(this).css({'box-shadow':'2px 2px 4px rgba(0,0,0,.2)'}, 500);
+                                },
+                        });
+                });
+                
+        </script>                
+</html>
