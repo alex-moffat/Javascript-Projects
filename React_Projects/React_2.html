@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <title id="title">React_2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="This webpage is providing examples of React properties and methods.">
+        <meta name="keywords" content="HTML, CSS, JavaScript, React">
+        <meta name="author" content="Alex Moffat">
+        <link rel="icon" href="./img/logo/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./css/misc.css">
+        <script src="./JS/misc.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	</head>
+	<body onload="loadMe()"> <!-- calls functions after page loads -->
+        <h1 id='Doc_Title'></h1>
+        <p id='Doc_Modified'>Starting paragraph text.</p>
+        <!--========== REACT CODE ==========-->
+        <h3>REACT CODE</h3>
+        <div id='like_button_container'></div>
+        <script>
+            const X = React.createElement;
+
+            class likeButton extends React.Component{
+                constructor(props) {
+                    super(props);
+                    this.state = {liked:false};
+                }
+                render() {
+                    if (this.state.liked) {
+                        return 'You clicked the like button!';
+                    }
+                    return X (
+                        'button',
+                        {onClick: () => this.setState({liked:true})},
+                        'Like'
+                    );
+                }
+            }
+
+            const domContainer = document.querySelector('#like_button_container');
+            ReactDOM.render(X(likeButton), domContainer);
+        </script>         
+        
+        <!--========== FOOTER ==========-->
+        <footer>
+            <small>&copy;</small> 2020 <span id="Doc_Author"></span> &nbsp; | &nbsp; <a href="mailto: wamoffat4@gmail.com">wamoffat4@gmail.com</a>
+        </footer>
+	</body>
+</html>

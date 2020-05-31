@@ -1,0 +1,171 @@
+/*========================================
+                TYPE
+=========================================*/
+
+* { 
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Public_Sans', sans-serif;    
+    font-size: 1rem;
+    margin: 0;
+    width: 100%;    
+}
+
+footer {
+    text-decoration: none;
+    padding: 1%;
+    background-color: rgba(180, 154, 144, .50);
+    font-variation-settings: 'wght' 200;
+    letter-spacing: 0.1rem;
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: white;   
+}
+
+/*========================================
+                Text
+=========================================*/
+
+/*========== GOOGLE FONT ==========*/
+/*  To set font-weight use: font-variation-settings: 'wght' [100 - 900];  */
+@font-face {
+    font-family: 'Public_Sans';
+    src: url('../fonts/PublicSans-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Public_Sans_italic';
+    src: url('../fonts/PublicSans-Italic-VariableFont_wght.ttf');
+}
+
+/* Quotation elements */
+q {
+    font-family: 'Public_Sans_italic', sans-serif;    
+}
+
+h1 {
+    text-align: center;
+    margin: 2%;
+}
+
+/*========================================
+                FORMATTING
+=========================================*/
+
+.center_text {
+    text-align: center;
+    padding: 1% 2%;
+}
+
+.text_box_pad {
+    padding: 3% 3% 8% 3%;
+}
+
+.pad_bottom {
+    padding-bottom: 3%;
+}
+
+.margin_bottom {
+    margin-bottom: 5%;
+}
+
+/*===== CONTAINER =====*/
+.container {
+    width: 90%;
+    /* min-width: 100%; */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;    
+}
+
+.container img {
+    vertical-align: middle; /* place in the middle of the parent element */
+    object-fit: cover; /* make sure image maintains aspect ratio */
+    width: 100%;        
+}
+
+
+/*===== TEXT - Caption text */
+.text_box {
+    position: absolute;
+    color: rgba(255, 255, 255, .75);
+    font-size: 5vw;
+    font-weight: bold;
+    /* center over container & photo */
+    top: 50%; /* down 50% from top of photo */ 
+    left: 50%; /* right 50% from left of photo */
+    /* the top left corner of the text would be at the photo center */ 
+    transform: translate(-50%,-50%); /* reposition center of text to center of photo: move X axis left (-50%) of the text block width and move Y axis up (-50%) of the text block height */
+    text-align: center;
+    width: 100%;    
+}
+
+
+/*========== FORM ==========*/
+.background {
+    background-color: rgb(225, 231, 195);
+}
+
+.contactForm {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgb(82, 70, 54);
+    background-color: rgb(146, 161, 128);
+    border: 2px solid rgb(103, 155, 68);
+    border-radius: 2vw;
+    padding: 5%;
+    box-shadow: 3px 3px 8px rgba(0,0,0,.5);
+}
+
+.contactForm .label {
+    padding: 1%;
+    line-height: 150%;    
+}
+
+.contactForm .rsvp {
+    font-family: Perpetua, Rockwell;
+    font-size: 1.2rem;
+    color: silver;
+    padding: 2% 3%;
+    width: 80%;
+    border: none;
+    margin: 10px 5px 10px 5px;
+    border-radius: .4vw;
+    background-color: white;
+    box-shadow: inset 1px 1px 4px rgba(0,0,0,25%), inset -1px -1px 4px rgba(0,0,0,25%);        
+}
+
+.contactForm #message {
+    width: 100%;
+}
+
+.form_submit {
+    background-color: rgb(103, 155, 68);
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1.1rem 2rem;
+    border: none;
+    border-radius: .5vw;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.5);
+	cursor: pointer;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    transition: transform 1.5s;     	
+}
+
+.form_submit:hover {
+    background-color: rgb(63, 95, 42);
+	color: white; /* Makes the font turn black when hovered over */
+	font-weight: bold;
+	transform: scale(1.2);	
+}

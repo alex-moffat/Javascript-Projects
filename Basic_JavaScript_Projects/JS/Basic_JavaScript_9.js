@@ -2,6 +2,8 @@
 //==============================================
 var SlideList, DotList, SlideCount, SlideIndex;
 
+
+
 //========== AUTO FIRE - AFTER PAGE LOAD
 function loadMe() {
     //===== LOAD PHOTO CAPTIONS
@@ -15,7 +17,9 @@ function loadMe() {
     DotList = document.getElementsByClassName("dot"); // finds all dots by class and puts them in a list
     SlideCount = SlideList.length;
     console.log("Number of slides: " + SlideCount);
-    setSlide(1); // set to first slide then calls --> slideShow()
+    setSlide(1); // set to first slide then calls --> slideShow() 
+    //===== SLIDESHOW -autoplay
+    setInterval(function() {changeSlide(1);}, 5000);       
 }
 
 //========== FUNCTIONS & METHODS ===============
