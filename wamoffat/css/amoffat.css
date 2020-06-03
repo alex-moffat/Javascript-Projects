@@ -240,12 +240,12 @@ nav .link {
     text-decoration: none;
 }
 
-.container {
+.container-h {
     position: relative;
     height: 100%;
 }
 
-.container img {
+.container-h img {
     position: absolute;
     top: 50%; /* down 50% from top of photo */ 
     left: 50%; /* right 50% from left of photo */
@@ -321,10 +321,15 @@ nav .link:hover {
     height: 100%;          	 
 }
 
-.container100, .container75, .container60, .container50, .container20, .container10, .container5 {
+.container100, .container75, .container60, .container50, .container40, .container30, .container20, .container10, .container5 {
     position: relative;
     margin-left: auto;
     margin-right:auto;
+}
+
+.container-w {
+    width: 100%;
+    height: auto;
 }
 
 .container100 {      
@@ -340,24 +345,27 @@ nav .link:hover {
 .container50 {   
     width: 50%;            
 }
+.container40 {   
+    width: 40%;            
+}
+.container30 {    
+    width: 30%;            
+}
 .container20 {    
     width: 20%;            
 }
 .container10 {       
     width: 10%;            
 }
-
 .container5 {       
     width: 5%;            
 }
 
-.container100 img, .container75 img, .container60 img, .container50 img, .container20 img, .container10 img, .container5 img {
+.container100 img, .container75 img, .container60 img, .container50 img, .container40 img, .container30 img, .container20 img, .container10 img, .container5 img {
     width: 100%;
     max-width: 100%;
     height: auto;        
 }
-
-
 
 .photo, .photo_cf, .photo_bw {
     position: relative;
@@ -401,16 +409,20 @@ nav .link:hover {
 
 
 /*========== GITHUB ==========*/
-.container40 {
-    position: relative;
-    margin-left: auto;
-    margin-right:auto;   
-    width: 40%;        
+.git_box_pad {
+    padding: 3% 3% 3% 3%;
 }
-.container40 img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;        
+
+.logo-list {
+    position: relative;
+    display: inline-block;    
+}
+
+.logo-list img{
+    width: 20%;
+    margin: 2%;
+    border: 1px solid #703e31;
+    border-radius: 4px;
 }
 
 /*========================================
