@@ -1,0 +1,222 @@
+/* Body */
+body {
+	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+}
+
+/* Navbar */
+.Navbar {
+	overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
+	background-color: black; /* This colors the navbar black */
+	position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
+	top: 0; /* This ensures no space is displayed above the navbar */
+	width: 100%; /* This makes the navbar span the entire width of the page */
+	z-index: 1; /*This ensures other elements don't display over the navbar */
+}
+
+/* Navbar text */
+.Navbar a {
+	float: left; /* This specifies that the text floats on the left on the navbar */
+	display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+	color: white; /* This is the font color for text on our navbar */
+	padding: 14px 16px; /* This adds padding around our text */
+	text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+	font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+	font-size: 20px; /* This specifies the font size for text on our navbar */
+	text-align: center; /* This centers the text within its container */
+}
+
+/* Navbar hover effect */
+.Navbar a:hover {
+	background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
+	color: black; /* This defines the font color that will display when you hover over the text on the navbar */
+	font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+}
+
+/* Navbar home button */
+.Navbar a.active { /* The active selector styles a link */
+  background-color: darkgray;  /* This specifies the background color behind the Home button on the navbar */ 
+}
+
+/* Video */
+#Typing_Video {
+	position: fixed; /* This fixes our video to the page  */
+	right: 0; /* This ensures no space between the edge of the video and the edge of the page */
+	bottom: 0; /* This ensures no space between the edge of the video and the edge of the page */
+	min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+	z-index: -1;
+}
+
+/* Text over the video */ 
+.Video_Text { 
+	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
+	color: white; 
+	width: 100%;
+	padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
+	margin-top: 23%;
+}
+
+/* Table - this section covers the styling of the columns and rows within our table */
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+	box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+
+.Column_1 {
+	float: left;  
+	width: 50%; /* This ensures one column takes up half the page width */
+	padding: 10px; 
+	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
+	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
+	background-color: #f2f2f2; 
+}
+
+.Column_2 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 1.9%;
+	height: 400px;
+	background-color: #4d4d4d;
+}
+
+.Column_3 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 3.5%;
+	height: 450px;
+	background-color: #4d4d4d;
+}
+
+.Row:after { /* This inserts something after the content of selected elements */
+	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+}
+
+/* Heading 1 elements */
+h1 {
+	text-transform: uppercase; /* We are capitalizing our headings */
+	font-family: "Trebuchet MS", Optima; 
+	text-align: center;
+	margin-top: 3%; /* We are adding a small margin above the headings */
+	color: #1a1a1a;
+}
+
+/* Paragraph elements */
+p {
+	font-family: Perpetua, Rockwell Extra Bold;
+	text-align: justify;
+	letter-spacing: 1px; /* This expands the text slightly */
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Center align elements - this embraces all centered text */
+center {
+	font-family: Perpetua, Rockwell Extra Bold;
+	text-align: center;
+	letter-spacing: 1px;
+	font-size: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+/* Anchor elements */
+a {
+	color: blue; /* We are ensuring all links are blue */
+}
+
+/* Quotation elements */
+q {
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Image elements */
+img {
+	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+    border-radius: 8px; /* This causes our images to have slightly rounded edges */
+    max-width: 100%; 
+    height: 340px; 
+	margin-left: auto; /* This in combination with margin-right: auto centers our images */
+    margin-right: auto;
+	display: block;	/* By specifying block display we can ensure our images are able to be centered */
+}
+
+/* Contact form */
+input[type=text] { /* This covers the input sections of the contact form */
+	width: 100%;
+	padding: 12px;
+    border: 1px solid #ccc; /* We are setting a solid border and its colors */
+    border-radius: 4px; 
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
+    font-family: Perpetua, Rockwell Extra Bold; 
+}
+
+/* Submit button */
+input[type=submit] { /* This covers the submit button for the contact form */
+	background-color: black;
+	color: white;
+	font-weight: bold;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	margin-left: auto;
+	margin-right: auto; 
+	font-family: Perpetua, Rockwell Extra Bold;
+}
+
+/* Hover effect for submit button */
+input[type=submit]:hover {
+	background-color: white; /* Makes the background turn white when hovered over */
+	color: black; /* Makes the font turn black when hovered over */
+	font-weight: bold; /* Makes the font bold when hovered over */
+	transform: scale(1.5); /* Makes the button increase 1.5 times in size */ 
+	transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds from start to finish */
+}
+
+/* Form elememt */
+form { 
+	border-radius: 5px; 
+	background-color: #f2f2f2;
+	padding: 20px;
+	font-family: "Trebuchet MS", Optima;
+}
+
+/* Center align element hover effect */
+center:hover {
+	transition: transform 2s;
+	transform: scale(1.1);
+}
+
+/* Paragraph element hover effect */
+p:hover {
+	color: #00004d;	
+    transition: transform 1s;
+	transform: scale(1.01);
+}
+
+/* Heading 1 element hover effect */
+h1:hover {
+	color: black;
+	font-weight: normal; /* Makes the text no longer bold when hovered over */ 
+}
+
+/* Image element hover effects */
+img:hover {
+	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+	transform: scale(1.1);
+}
+
+/* Footer element */
+footer {
+	padding: 2%;
+	background-color:white;
+}
