@@ -337,15 +337,7 @@ function checkForWin() {
         avatarArray.push(info[i].charAt(1));
     }
     //===== check for any 1 of 8 win conditions
-    checkWinCon(squareArray,avatarArray);
-    //checkWinCon1(info,squareArray);
-    //checkWinCon2(info,squareArray);
-    //checkWinCon3(info,squareArray);
-    //checkWinCon4(info,squareArray);
-    //checkWinCon5(info,squareArray);
-    //checkWinCon6(info,squareArray);
-    //checkWinCon7(info,squareArray);
-    //checkWinCon8(info,squareArray);
+    checkWinCon(squareArray,avatarArray);    
     check4Tie();
 }
 
