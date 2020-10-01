@@ -2,8 +2,6 @@
 //==============================================
 var SlideList, DotList, SlideCount, SlideIndex;
 
-
-
 //========== AUTO FIRE - AFTER PAGE LOAD
 function loadMe() {
     //===== LOAD PHOTO CAPTIONS
@@ -42,20 +40,6 @@ function cdown() {
         }
     }
     // tick(); BUG remove this line of code that kept the timer going after the alert
-}
-
-//========== ALARM : This original code has a bug that keeps the counter going down after the alert
-function countdown() {
-    var Sec = document.getElementById("Seconds").value;
-    function tick() {
-        Timer.innerHTML = Sec;
-        Sec = Sec - 1; 
-        setTimeout(tick, 1000);
-        if(Sec == -1) {
-            alert("Time's Up!");
-        }
-    }
-    tick();
 }
 
 //========== SHOWSLIDE - Display change of slides and dots
