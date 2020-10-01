@@ -372,7 +372,7 @@ function getMeat(runningTotal, text1) {
 An HTML/JavaScript two-player TicTacToe game with graphics and sounds.
 
 ### Video
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=PL71jbus9m0" target="_blank"><img src="https://github.com/alex-moffat/Javascript-Projects/blob/master/TicTacToe/Screenshot_TicTacToe.jpg" alt="TicTacToe_Game" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=PL71jbus9m0" target="_blank"><img src="https://github.com/alex-moffat/Javascript-Projects/blob/master/TicTacToe/Screenshot_TicTacToe_play.jpg" alt="TicTacToe_Game" border="10" /></a>
 
 ### Details
 - Audio used for place avatar, win, draw, and dice roll
