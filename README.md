@@ -157,7 +157,7 @@ function updateDisplay() {
 Custom JavaScript photo carousel using image alt property to populate title display overlay.
 
 ### Video
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=BKg8p8Ph4YM"><img src="https://github.com/alex-moffat/Javascript-Projects/blob/master/Small_Projects/Screenshot_carousel.jpg" alt="Carousel" border="10" /></a>
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BKg8p8Ph4YM"><img src="https://github.com/alex-moffat/Javascript-Projects/blob/master/Small_Projects/Screenshot_carousel_play.jpg" alt="Carousel" border="10" /></a>
 
 ### Details
 - Auto-transition every 5 seconds
