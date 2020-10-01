@@ -157,16 +157,17 @@ function updateDisplay() {
 Custom JavaScript photo carousel using image alt property to populate title display overlay.
 
 ### Output
-![alt text](https://github.com/alex-moffat/Javascript-Projects/blob/master/Calculator/Screenshot_calculator.jpg "Calculator")
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=BKg8p8Ph4YM" target="_blank"><img src="https://github.com/alex-moffat/Javascript-Projects/blob/master/Small_Projects/Screenshot_carousel.jpg" alt="Carousel" border="10" /></a>
 
 ### Details
-- Button hover effects
-- Basic math functions
-- Clear, equal and decimals
-- Global constant object to hold values 
-- Event Listeners
-- Query Selector
-- Shorthand methods
+- Auto-transition every 5 seconds
+- Stylized position markers
+- Image position selection
+- Directional advance with passthrough
+- Hover effects for position dots and directional buttons
+- Continuous transitions with passthrough
+- Image Alt property populates slide titles
+- Alert when user-set timer expires
 
 ### JS Code
 ```JS
