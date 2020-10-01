@@ -17,6 +17,7 @@ A fully functional calculator to perform basic math on an HTML page.
 - Global constant object to hold values 
 - Event Listeners
 - Query Selector
+- Shorthand methods
 
 ```JS
 //========== DECLARE GLOBAL VARIABLES & CONSTANTS ==========
