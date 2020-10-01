@@ -4,7 +4,7 @@ JavaScript projects that took between 2-hours and 2-days to complete. Most proje
 ## Contents
 - [Calculator Demo](#calculator-demo)
 - [Pizza Demo](#pizza-demo)
-- {TicTacToe Game](#tictactoe-game)
+- [TicTacToe Game](#tictactoe-game)
 
 ## Calculator Demo
 A fully functional calculator to perform basic math on an HTML page.
@@ -268,8 +268,8 @@ function getMeat(runningTotal, text1) {
 ## TicTacToe Game
 An HTML/JavaScript two-player TicTacToe game with graphics and sounds.
 
-### Output
-![alt text](https://github.com/alex-moffat/Javascript-Projects/blob/master/Calculator/Screenshot_calculator.jpg "Calculator")
+### Video
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=PL71jbus9m0" target="_blank"><img src="https://github.com/alex-moffat/Javascript-Projects/blob/master/TicTacToe/Screenshot_TicTacToe.jpg" alt="TicTacToe_Game" border="10" /></a>
 
 ### Details
 - Audio used for place avatar, win, draw, and dice roll
